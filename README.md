@@ -39,3 +39,10 @@ yarn build
 
 * [ReactJS](https://github.com/facebook/react) - The web framework used
 * [Redux](https://github.com/reduxjs/redux) - Predictable state container for JavaScript apps
+
+### Possible improvements
+
+ - Replace remaining data to Redux
+ - Fix level toggle to map with a few levels
+
+
