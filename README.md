@@ -42,7 +42,8 @@ yarn build
 
 ### Possible improvements
 
- - Replace remaining data to Redux
- - Fix level toggle to map with a few levels
+ - Replace remaining data to Redux;
+ - Fix for level toggle to map with a few levels;
+ - Fix for updating State (App.js) with favorites without lag.
 
 
