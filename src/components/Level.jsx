@@ -41,6 +41,7 @@ class Level extends Component{
                         <div className='text'>{ level }</div>
                     </div>
                 </div>
+                <div className='background' />
             </div>
         )
     }

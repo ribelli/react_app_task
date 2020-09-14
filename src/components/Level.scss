@@ -3,7 +3,6 @@
 
 @mixin separator {
   width: 7px;
-  border-radius: 5px;
   left: 50%;
   position: absolute;
   background: $plainBlack;
@@ -35,6 +34,25 @@
     height: 40px;
   }
 
+  .background {
+    background-color: $plainBlack;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+
+    @media all and (min-width: $small-min-width) {
+      height: 27px;
+      width: 27px;
+    }
+
+    @media all and (min-width: $medium-min-width) {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
   .layer {
     position: absolute;
 
@@ -58,6 +76,7 @@
 
     &__separator {
       position: absolute;
+      z-index: 1;
       left: 5px;
 
       @media all and (min-width: $small-min-width) {

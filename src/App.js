@@ -68,19 +68,20 @@ class App extends Component {
         );
     };
 
-    getFavorites = (newFavorites) => {
+    getFavorites (newFavorites) {
+        if (typeof newFavorites !== 'undefined') {
+            this.setState({
+                favorites: newFavorites
+            })
+        }
         this.props.dispatch(fetchFavoritesAction())
         .then (response => {
-                if (typeof newFavorites !== 'undefined') {
-                    this.setState({
-                        favorites: newFavorites
-                    })
-                } else {
-                    this.setState({
-                        favorites: response
-                    })
-                }
+            if (typeof newFavorites === 'undefined') {
+                this.setState({
+                    favorites: response
+                })
             }
+        }
         ).catch( error =>
             console.log(error)
         )

@@ -5,7 +5,15 @@
   text-align: center;
 
     .main-layer {
-        padding-top: 90px;
+
+
+      @media all and (min-width: $small-min-width) {
+        padding-top: 80px;
+      }
+
+      @media all and (min-width: $medium-min-width) {
+        padding-top: 95px;
+      }
     }
 }
 

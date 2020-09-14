@@ -1,13 +1,17 @@
 @import '../styles/screen-sizes.scss';
 
 .CircularProgressbar {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+
   @media all and (min-width: $small-min-width) {
     width: 28px !important;
     height: 28px;
   }
 
   @media all and (min-width: $medium-min-width) {
-    width: 40px !important;
+    width: 39px !important;
     height: 40px;
   }
 }
