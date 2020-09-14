@@ -1,0 +1,52 @@
+@import '../styles/color-palette.scss';
+@import '../styles/screen-sizes.scss';
+
+.c-search {
+  label {
+    position: relative;
+  }
+
+  &._with-button {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .search {
+    position: relative;
+    height: 40px;
+    color: black;
+    font-size: 13px;
+    padding: 5px 15px;
+    margin: 10px;
+    background: $plainWhite;
+    border-radius: 25px;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $lightGrey;
+      font-size: 11px;
+    }
+
+    @media all and (min-width: $small-min-width){
+      width: 85vw;
+    }
+
+    @media all and (min-width: $medium-min-width){
+      width: 30vw;
+    }
+  }
+
+  .icon-search {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    right: 28px;
+    background: url('../assets/icons/search.svg') center center / cover no-repeat;
+    cursor: pointer;
+  }
+}

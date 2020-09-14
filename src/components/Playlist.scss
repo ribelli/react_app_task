@@ -1,0 +1,22 @@
+@import '../styles/color-palette.scss';
+@import '../styles/screen-sizes';
+
+.c-playlist {
+  background-color: $plainBlack;
+
+  &__items {
+    margin-bottom: 0;
+
+    @media all and (min-width: $small-min-width) {
+      padding: 0;
+    }
+
+    @media all and (min-width: $medium-min-width) {
+      padding: 0 10vw;
+    }
+
+    @media all and (min-width: $large-min-width) {
+      padding: 0 20vw;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@import 'styles/color-palette.scss';
+@import 'styles/screen-sizes.scss';
+
+.app {
+  text-align: center;
+
+    .main-layer {
+        padding-top: 90px;
+    }
+}
+
+.app-header {
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: $plainWhite;
+
+  .header {
+    width: 100%;
+    height: 20vh;
+    font-size: 0.5em;
+    padding: 25px 0;
+    z-index: 2;
+
+    &._fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    &._colored {
+      /* non-retina */
+      background: url('./assets/yousician-hero.png') no-repeat top left;
+      background-size: 100% 100%;
+
+      /* retina display, dpr 2 */
+      @media only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min--moz-device-pixel-ratio: 2),
+      only screen and (-o-min-device-pixel-ratio: 2/1),
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 2dppx) {
+        background: url('./assets/yousician-hero@3x.png') no-repeat top left;
+        background-size: 100% 100%;
+      }
+
+      /* retina display. dpr 3 */
+      @media only screen and (-webkit-min-device-pixel-ratio: 3),
+      only screen and (min--moz-device-pixel-ratio: 3),
+      only screen and (-o-min-device-pixel-ratio: 3/2),
+      only screen and (min-device-pixel-ratio: 3),
+      only screen and (min-resolution: 3dppx) {
+        background: url('./assets/yousician-hero@3x.png') no-repeat top left;
+        background-size: 100% 100%;
+      }
+    }
+
+    /* non-retina phones */
+    @media all and (min-width: $small-min-width)
+    and (max-device-width: 480px) {
+      background: url('./assets/yousician-hero-mobile.png') no-repeat top left;
+      background-size: 100% 100%;
+    }
+
+    /* phones, dpr 2 */
+    @media only screen
+    and (min-width: $small-min-width)
+    and (max-device-width: 640px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      background: url('./assets/yousician-hero-mobile@2x.png') no-repeat top left;
+      background-size: 100% 100%;
+    }
+
+    /* phones, dpr 3 */
+    @media only screen and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3) {
+      background: url('./assets/yousician-hero-mobile@3x.png') no-repeat top left;
+      background-size: 100% 100%;
+    }
+
+    &__text {
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    p {
+      @media all and (min-width: $small-min-width) {
+        font-size: 1.5em;
+      }
+
+      @media all and (min-width: $medium-min-width) {
+        font-size: 1.2em;
+      }
+    }
+  }
+}

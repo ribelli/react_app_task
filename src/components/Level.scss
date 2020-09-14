@@ -1,0 +1,119 @@
+@import '../styles/color-palette.scss';
+@import '../styles/screen-sizes.scss';
+
+@mixin separator {
+  width: 7px;
+  border-radius: 5px;
+  left: 50%;
+  position: absolute;
+  background: $plainBlack;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+
+  @media all and (min-width: $small-min-width) {
+    height: 15px;
+  }
+
+  @media all and (min-width: $medium-min-width) {
+    height: 21px;
+  }
+}
+
+.c-level {
+  position: relative;
+
+  @media all and (min-width: $small-min-width) {
+    width: 28px;
+    height: 28px;
+    margin: 0 5px;
+  }
+  @media all and (min-width: $medium-min-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  .layer {
+    position: absolute;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media all and (min-width: $small-min-width) {
+      width: 15px;
+      height: 15px;
+      top: 7px;
+      left: 6px;
+    }
+
+    @media all and (min-width: $medium-min-width) {
+      width: 25px;
+      height: 25px;
+      top: 8px;
+      left: 7px;
+    }
+
+    &__separator {
+      position: absolute;
+      left: 5px;
+
+      @media all and (min-width: $small-min-width) {
+        top: -7px;
+      }
+
+      @media all and (min-width: $medium-min-width) {
+        top: -8px;
+        width: 9px;
+        height: 20px;
+      }
+
+      div {
+        @include separator;
+      }
+
+      .rot120deg {
+        -moz-transform: rotate(120deg);
+        -webkit-transform: rotate(120deg);
+        -o-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+        transform: rotate(120deg);
+      }
+
+      .rot240deg {
+        -moz-transform: rotate(240deg);
+        -webkit-transform: rotate(240deg);
+        -o-transform: rotate(240deg);
+        -ms-transform: rotate(240deg);
+        transform: rotate(240deg);
+      }
+    }
+
+    &__level {
+      position: absolute;
+      z-index: 1;
+      color: $plainWhite;
+      font-weight: 700;
+
+      @media all and (min-width: $small-min-width) {
+        width: 15px;
+        height: 10px;
+        font-size: 14px;
+        line-height: 13px;
+      }
+
+      @media all and (min-width: $medium-min-width) {
+        width: 23px;
+        height: 23px;
+        font-size: 19px;
+        line-height: 24px;
+      }
+
+      & .text {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import '../styles/screen-sizes.scss';
+
+.favorite {
+  position: absolute;
+  vertical-align: middle;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media all and (min-width: $small-min-width) {
+    right: 5px;
+    top: 3px;
+  }
+
+  @media all and (min-width: $medium-min-width) {
+    top: 8px;
+  }
+
+  @media all and (min-width: $large-min-width) {
+    right: 15px;
+  }
+}

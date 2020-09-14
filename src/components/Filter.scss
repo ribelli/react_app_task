@@ -1,0 +1,33 @@
+@import '../styles/color-palette.scss';
+@import '../styles/screen-sizes.scss';
+
+.c-filter {
+  .title {
+    display: flex;
+    justify-content: flex-end;
+    background: url('../assets/icons/filter.svg') right center / cover no-repeat;
+    background-size: 20px 20px;
+    color: $plainWhite;
+    padding-right: 25px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media all and(min-width: $small-min-width) {
+      margin: 1vw 3vw;
+    }
+    @media all and(min-width: $medium-min-width) {
+      margin: 1vw 10vw;
+    }
+    @media all and(min-width: $large-min-width) {
+      margin: 1vw 25vw;
+    }
+  }
+
+  .filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

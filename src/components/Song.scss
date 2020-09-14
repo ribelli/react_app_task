@@ -1,0 +1,75 @@
+@import '../styles/color-palette.scss';
+@import '../styles/screen-sizes';
+
+$fullRatioSquare: 100px;
+$smallRatioSquare: 60px;
+
+.c-song {
+  display: grid;
+  grid-column-gap: 1vw;
+  align-items: center;
+  color: $plainWhite;
+  padding: 10px;
+
+  @media all and (min-width: $small-min-width) {
+    grid-template-columns: 15% auto 24%;
+  }
+
+  @media all and (min-width: $medium-min-width) {
+    grid-template-columns: 15% auto 15%;
+  }
+
+  &:nth-child(odd) {
+    background-color: $darkGrey;
+  }
+
+  .album {
+    object-fit: cover;
+
+    @media all and (min-width: $small-min-width) {
+      width: $smallRatioSquare;
+      height: $smallRatioSquare;
+    }
+
+    @media all and (min-width: $medium-min-width) {
+      width: $fullRatioSquare;
+      height: $fullRatioSquare;
+    }
+  }
+
+  .info {
+    text-align: start;
+
+    @media all and (min-width: $small-min-width) {
+      padding: 0 25px;
+    }
+
+    @media all and (min-width: $medium-min-width) {
+      padding: 0 45px;
+    }
+
+    &._icon {
+      position: relative;
+      padding: 0 5px;
+      align-self: center;
+
+      .red {
+        fill: $red;
+      }
+
+      .grey {
+        fill: $middleGrey;
+      }
+    }
+
+    &__title,
+    &__artist {
+      @media all and (min-width: $small-min-width) and (max-width: 768px) {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 40vw;
+      }
+    }
+  }
+}
