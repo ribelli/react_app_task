@@ -14,7 +14,7 @@ import Search from './components/Search';
 
 const HEADER_TITLE = {
     main: 'New songs delivered every week',
-    describe: 'Here are the most recent additions to the Yousician App. Start playing today!'
+    describe: 'Here are the most recent additions'
 };
 const LIMIT = 20;
 
